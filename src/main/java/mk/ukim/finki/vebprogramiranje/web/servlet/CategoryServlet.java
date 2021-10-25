@@ -56,11 +56,4 @@ public class CategoryServlet extends HttpServlet {
         categoryService.create(categoryName, categoryDescription);
         resp.sendRedirect("/servlet/category");
     }
-
-    @Override
-    public void init() throws ServletException {
-        super.init();
-
-    }
-
 }
