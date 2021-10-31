@@ -25,7 +25,8 @@ public class LoginFilter implements Filter {
         User user = (User) request.getSession().getAttribute("user");
         String requestedPath = request.getServletPath();
 
-        if(user == null && !requestedPath.equals("/login") && !requestedPath.equals("/main.css")){
+        if(user == null && !requestedPath.equals("/login") && !requestedPath.equals("/register") &&
+                !requestedPath.equals("/main.css")){
             response.sendRedirect("/login");
         }
         else {
